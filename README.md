@@ -1,4 +1,4 @@
-## Desafio para Back-end Developer na DoroTech - C# .NET
+## Desafio para Back-end Developer - C# .NET
 
 #### Requisitos Gerais:
 
@@ -10,7 +10,7 @@ Para ajudar a livraria foi solicitado a você desenvolver uma aplicação web pa
 * Ao persistir, validar se o livro já foi cadastrado.
 * O sistema deverá permitir consultar, criar, editar e excluir um livro.
 * Os livros devem ser persistidos em um banco de dados.
-* Criar algum mecanismo de log de registro e de erro.
+* Autenticação
 
 #### Requisitos Técnicos:
 
