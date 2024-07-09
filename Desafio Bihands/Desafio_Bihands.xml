@@ -1,0 +1,147 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Desafio Bihands</name>
+    </assembly>
+    <members>
+        <member name="T:Desafio_Bihands.Controllers.AuthController">
+            <summary>
+            Controlador para autenticação de usuários.
+            </summary>
+        </member>
+        <member name="M:Desafio_Bihands.Controllers.AuthController.Login(Desafio_Bihands.Controllers.UserLogin)">
+            <summary>
+            Realiza a autenticação do usuário e gera um token JWT.
+            </summary>
+            <param name="userLogin">As credenciais de login do usuário.</param>
+            <returns>Um token JWT se a autenticação for bem-sucedida.</returns>
+        </member>
+        <member name="T:Desafio_Bihands.Controllers.UserLogin">
+            <summary>
+            Representa as credenciais de login do usuário.
+            </summary>
+        </member>
+        <member name="P:Desafio_Bihands.Controllers.UserLogin.Username">
+            <summary>
+            Nome de usuário.
+            </summary>
+        </member>
+        <member name="P:Desafio_Bihands.Controllers.UserLogin.Password">
+            <summary>
+            Senha do usuário.
+            </summary>
+        </member>
+        <member name="T:Desafio_Bihands.Controllers.BooksController">
+            <summary>
+            Controlador para gerenciar os livros da biblioteca.
+            </summary>
+        </member>
+        <member name="M:Desafio_Bihands.Controllers.BooksController.#ctor(Desafio_Bihands.Data.LibraryContext)">
+            <summary>
+            Inicializa uma nova instância do <see cref="T:Desafio_Bihands.Controllers.BooksController"/>.
+            </summary>
+            <param name="context">O contexto do banco de dados.</param>
+        </member>
+        <member name="M:Desafio_Bihands.Controllers.BooksController.GetBooks(System.Int32,System.Int32)">
+            <summary>
+            Obtém uma lista paginada de livros.
+            </summary>
+            <param name="page">O número da página.</param>
+            <param name="pageSize">O tamanho da página.</param>
+            <returns>Uma lista de livros.</returns>
+        </member>
+        <member name="M:Desafio_Bihands.Controllers.BooksController.GetBook(System.Int32)">
+            <summary>
+            Obtém um livro pelo seu identificador.
+            </summary>
+            <param name="id">O identificador do livro.</param>
+            <returns>O livro correspondente ao identificador.</returns>
+        </member>
+        <member name="M:Desafio_Bihands.Controllers.BooksController.PostBook(Desafio_Bihands.Data.Book)">
+            <summary>
+            Adiciona um novo livro.
+            </summary>
+            <param name="book">O livro a ser adicionado.</param>
+            <returns>O livro adicionado.</returns>
+        </member>
+        <member name="M:Desafio_Bihands.Controllers.BooksController.PutBook(System.Int32,Desafio_Bihands.Data.Book)">
+            <summary>
+            Atualiza um livro existente.
+            </summary>
+            <param name="id">O identificador do livro a ser atualizado.</param>
+            <param name="book">O livro atualizado.</param>
+            <returns>Nenhum conteúdo.</returns>
+        </member>
+        <member name="M:Desafio_Bihands.Controllers.BooksController.DeleteBook(System.Int32)">
+            <summary>
+            Remove um livro existente.
+            </summary>
+            <param name="id">O identificador do livro a ser removido.</param>
+            <returns>Nenhum conteúdo.</returns>
+        </member>
+        <member name="T:Desafio_Bihands.Data.LibraryContext">
+            <summary>
+            Contexto do banco de dados para a aplicação de biblioteca.
+            </summary>
+        </member>
+        <member name="P:Desafio_Bihands.Data.LibraryContext.Books">
+            <summary>
+            Conjunto de dados representando os livros na biblioteca.
+            </summary>
+        </member>
+        <member name="M:Desafio_Bihands.Data.LibraryContext.#ctor(Microsoft.EntityFrameworkCore.DbContextOptions{Desafio_Bihands.Data.LibraryContext})">
+            <summary>
+            Inicializa uma nova instância do <see cref="T:Desafio_Bihands.Data.LibraryContext"/>.
+            </summary>
+            <param name="options">Opções para configurar o contexto.</param>
+        </member>
+        <member name="M:Desafio_Bihands.Data.LibraryContext.OnModelCreating(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <summary>
+            Configura o modelo ao criar o contexto.
+            </summary>
+            <param name="modelBuilder">O construtor de modelos usado para configurar as entidades.</param>
+        </member>
+        <member name="T:Desafio_Bihands.Data.Book">
+            <summary>
+            Representa um livro na biblioteca.
+            </summary>
+        </member>
+        <member name="P:Desafio_Bihands.Data.Book.Id">
+            <summary>
+            Identificador único do livro.
+            </summary>
+        </member>
+        <member name="P:Desafio_Bihands.Data.Book.Name">
+            <summary>
+            Nome do livro.
+            </summary>
+        </member>
+        <member name="P:Desafio_Bihands.Data.Book.Author">
+            <summary>
+            Autor do livro.
+            </summary>
+        </member>
+        <member name="P:Desafio_Bihands.Data.Book.ISBN">
+            <summary>
+            ISBN do livro.
+            </summary>
+        </member>
+        <member name="P:Desafio_Bihands.Data.Book.Year">
+            <summary>
+            Ano de publicação do livro.
+            </summary>
+        </member>
+        <member name="T:Desafio_Bihands.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:Desafio_Bihands.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Desafio_Bihands.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Desafio_Bihands.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
